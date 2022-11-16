@@ -28,7 +28,7 @@ void Player::Update()
 	auto keys = Input::Instance()->GetKey();
 
 	//keyboard input check and player direction setting
-	/*if (Input::Instance()->IsKeyPressed(HM_KEY_A))
+	if (Input::Instance()->IsKeyPressed(HM_KEY_A))
 	{
 		directionStand = directionRun = Vector<int>::Left;
 	}
@@ -36,7 +36,7 @@ void Player::Update()
 	else if (Input::Instance()->IsKeyPressed(HM_KEY_D))
 	{
 		directionStand = directionRun = Vector<int>::Right;
-	}*/
+	}
 	
 	if (Input::Instance()->IsKeyPressed(HM_KEY_W))
 	{
