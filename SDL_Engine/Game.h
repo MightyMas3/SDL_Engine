@@ -17,15 +17,15 @@ public:
 	void Shutdown();
 
 private:
-	Text m_score;
-	//Text m_title;
-	Music m_music;
-	Screen m_screen;
+	Text score;
+	//Text title;
+	Music music;
+	Screen screen;
 
-	bool m_isGameRunning{ true };
-	Texture m_background{ 1280, 766 };
+	bool isGameRunning{ true };
+	Texture background{ 1280, 766 };
 	
-	std::unique_ptr<Player> m_player;
+	std::unique_ptr<Player> player;
 	
 	
 };

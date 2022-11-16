@@ -3,8 +3,8 @@
 
 Screen::Screen()
 {
-	m_window = nullptr;
-	m_renderer = nullptr;
+	window = nullptr;
+	renderer = nullptr;
 }
 
 Screen::~Screen()
@@ -14,7 +14,7 @@ Screen::~Screen()
 
 SDL_Renderer* Screen::GetRenderer()
 {
-	return m_renderer;
+	return renderer;
 }
 
 bool Screen::initialize()
@@ -26,21 +26,21 @@ bool Screen::initialize()
 		return false;
 	}
 
-	m_window = SDL_CreateWindow("My awesome game engine!",
+	window = SDL_CreateWindow("My awesome game engine!",
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,
 		1280, 720,
 		0);
 
-	if (!m_window) // window is a nullptr so if not (!) 0, is 1 so true
+	if (!window) // window is a nullptr so if not (!) 0, is 1 so true
 	{
 		std::cout << "Game window could not be created!" << std::endl;
 		return false;
 	}
 
-	m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED);
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-	if (!m_renderer)
+	if (!renderer)
 	{
 		std::cout << "Renderer could not be created!" << std::endl;
 		return false;
@@ -52,18 +52,18 @@ bool Screen::initialize()
 void Screen::refresh()
 {
 	//clears the screen
-	SDL_RenderClear(m_renderer);
+	SDL_RenderClear(renderer);
 }
 
 void Screen::present()
 {
 	//swaps the frame buffers
-	SDL_RenderPresent(m_renderer);
+	SDL_RenderPresent(renderer);
 }
 
 void Screen::shutdown()
 {
-	SDL_DestroyRenderer(m_renderer);
-	SDL_DestroyWindow(m_window);
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
 	SDL_Quit();
 }

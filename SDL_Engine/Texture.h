@@ -35,18 +35,18 @@ public:
 private:
 	
 	int m_cel;
-	float m_animationSpeed;
-	float m_animationRunningTime;
+	float animationSpeed;
+	float animationRunningTime;
 
-	bool m_isAnimated;
-	bool m_isAnimationDead;
-	bool m_isAnimationLooping;
-	bool m_isAnimationLoopFinal;
+	bool isAnimated;
+	bool isAnimationDead;
+	bool isAnimationLooping;
+	bool isAnimationLoopFinal;
 
-	SDL_Texture* m_texture;
-	Vector<int> m_sourceDimension;
-	Vector<int> m_celDimension;
-	Vector<int> m_textureDimension;
+	SDL_Texture* texture;
+	Vector<int> sourceDimension;
+	Vector<int> celDimension;
+	Vector<int> textureDimension;
 	
 
 };

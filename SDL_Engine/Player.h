@@ -16,13 +16,13 @@ public:
 
 private:
 
-	int m_velocity;
+	int velocity;
 
-	Texture m_idle;
-	Texture m_run;
+	Texture idle;
+	Texture run;
 
-	Vector<int> m_position;
-	Vector<int> m_directionRun;
-	Vector<int> m_directionStand;
+	Vector<int> position;
+	Vector<int> directionRun;
+	Vector<int> directionStand;
 
 };

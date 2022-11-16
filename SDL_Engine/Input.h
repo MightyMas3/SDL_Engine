@@ -313,17 +313,17 @@ private:
 	Input(const Input&);
 	Input& operator=(Input&);
 
-	char m_key;
+	char key;
 
-	int m_modifier;
-	int m_mouseWheel;
-	int m_mouseButton;
+	int modifier;
+	int mouseWheel;
+	int mouseButton;
 
-	bool m_isKeyPressed;
-	bool m_isMouseClicked;
-	bool m_isWindowClosed;
+	bool isKeyPressed;
+	bool isMouseClicked;
+	bool isWindowClosed;
 
-	Vector<int> m_mouseMotion;
-	Vector<int> m_mousePosition;
+	Vector<int> mouseMotion;
+	Vector<int> mousePosition;
 
 };

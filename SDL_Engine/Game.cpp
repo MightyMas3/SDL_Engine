@@ -3,29 +3,29 @@
 
 bool Game::Initialize()
 {
-    m_screen.initialize();
-	m_player = std::make_unique<Player>(m_screen);
+    screen.initialize();
+	player = std::make_unique<Player>(screen);
 
-    m_background.Load("Images/Desert_Midday1.png", m_screen);
-    m_background.SetSourceDimension(1, 1, 1280, 766);
+    background.Load("Images/Desert_Midday1.png", screen);
+    background.SetSourceDimension(1, 1, 1280, 766);
 
-    m_music.Initialize();
-    m_music.Load("Music/Adventure_Fantasy Track 4.wav");
-    m_music.SetVolume(0.2f);
-    m_music.Play(Music::Loop::Ongoing);
+    music.Initialize();
+    music.Load("Music/Adventure_Fantasy Track 4.wav");
+    music.SetVolume(0.2f);
+    music.Play(Music::Loop::Ongoing);
 
-    m_score.Initialize();
-    m_score.Load("Fonts/OCRAEXT.ttf");
-    m_score.SetSize(150, 75);
-    m_score.SetColor(0, 0, 0);
-    m_score.SetString("Score: 0");
+    score.Initialize();
+    score.Load("Fonts/OCRAEXT.ttf");
+    score.SetSize(150, 75);
+    score.SetColor(0, 0, 0);
+    score.SetString("Score: 0");
 
     /*
-    m_title.Initialize();
-    m_title.Load("Fonts/BAUHS93.ttf");
-    m_title.SetSize(500, 200);
-    m_title.SetColor(139, 69, 19);
-    m_title.SetString("MY AMAZING GAME ENGINE");*/
+    title.Initialize();
+    title.Load("Fonts/BAUHS93.ttf");
+    title.SetSize(500, 200);
+    title.SetColor(139, 69, 19);
+    title.SetString("MY AMAZING GAME ENGINE");*/
 
 	
 
@@ -34,13 +34,13 @@ bool Game::Initialize()
 
 void Game::Run()
 {
-	while (m_isGameRunning)
+	while (isGameRunning)
 	{
-		m_screen.present();
+		screen.present();
 
 		Input::Instance()->Update();
 
-		m_isGameRunning = !(Input::Instance()->IsWindowClosed());
+		isGameRunning = !(Input::Instance()->IsWindowClosed());
 
 		//Vector<int> mousePosition = Input::Instance()->GetMousePosition();
 		//Vector<int> mouseMotion = Input::Instance()->GetMouseMotion();
@@ -56,31 +56,31 @@ void Game::Run()
 		//	std::cout << "space key pressed " << std::endl;
 		//}
 
-		m_background.Render(m_screen, 0, 0);
+		background.Render(screen, 0, 0);
 
-		m_player->Update();
-		m_player->Render(m_screen);
+		player->Update();
+		player->Render(screen);
 
 		//title.Render(screen, 400, 250);
 
-		m_score.Render(m_screen, 10, 10);
+		score.Render(screen, 10, 10);
 
-		m_screen.present();
+		screen.present();
 	}
 }
 
 void Game::Shutdown()
 {
-	m_music.Unload();
-	m_music.Shutdown();
+	music.Unload();
+	music.Shutdown();
 	
-	//m_title.Unload();
-	//m_title.Shutdown();
+	//title.Unload();
+	//title.Shutdown();
 	
-	m_score.Unload();
-	m_score.Shutdown();
+	score.Unload();
+	score.Shutdown();
 	
-	m_background.Unload();
+	background.Unload();
 	
-	m_screen.shutdown();
+	screen.shutdown();
 }
