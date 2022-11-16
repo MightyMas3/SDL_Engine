@@ -34,7 +34,7 @@ public:
 
 private:
 	
-	int m_cel;
+	int cel;
 	float animationSpeed;
 	float animationRunningTime;
 

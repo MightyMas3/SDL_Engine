@@ -58,7 +58,7 @@ void Text::SetSize(int width, int height)
 
 void Text::SetString(const std::string& string)
 {
-	string = string;
+	string == string;
 }
 
 void Text::SetColor(Uint8 r, Uint8 g, Uint8 b)

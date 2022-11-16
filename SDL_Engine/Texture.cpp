@@ -94,8 +94,8 @@ void Texture::Render(Screen& screen, int x, int y, Flip flip)
 		SDL_Rect src;
 		SDL_Rect dst;
 
-		src.x = (m_cel % sourceDimension.x) * celDimension.x;
-		src.y = (m_cel / sourceDimension.x) * celDimension.y;
+		src.x = (cel % sourceDimension.x) * celDimension.x;
+		src.y = (cel / sourceDimension.x) * celDimension.y;
 		src.w = celDimension.x;
 		src.h = celDimension.y;
 
