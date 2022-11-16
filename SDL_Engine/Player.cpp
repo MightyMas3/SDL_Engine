@@ -38,7 +38,7 @@ void Player::Update()
 		directionStand = directionRun = Vector<int>::Right;
 	}
 	
-	if (Input::Instance()->IsKeyPressed(HM_KEY_W))
+	else if (Input::Instance()->IsKeyPressed(HM_KEY_W))
 	{
 		directionStand = directionRun = Vector<int>::Down;
 	}

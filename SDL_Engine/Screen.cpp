@@ -7,6 +7,7 @@ Screen::Screen()
 	renderer = nullptr;
 }
 
+//TODO - Remove
 Screen::~Screen()
 {
 

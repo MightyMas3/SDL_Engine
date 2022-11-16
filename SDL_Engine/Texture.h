@@ -4,6 +4,8 @@
 #include "vector.h"
 #include "Screen.h"
 
+//TODO - Tidy code
+
 class Texture
 {
 

@@ -36,7 +36,7 @@ void Game::Run()
 {
 	while (isGameRunning)
 	{
-		screen.present();
+		screen.present(); //???
 
 		Input::Instance()->Update();
 

@@ -18,8 +18,11 @@ public:
 	Music();
 
 	bool Initialize(int frequency = 44100, int chunkSize = 1024);
+	
+	//TODO - Why two functions?
 	bool Load(const std::string& filename);
 	bool Load(const std::string& filename, const std::string& tag);
+
 	void Unload();
 	void Shutdown();
 

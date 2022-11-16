@@ -5,6 +5,8 @@
 #include <SDL_ttf.h>
 #include "Screen.h"
 
+//TODO - Tidy code
+
 class Text
 {
 
